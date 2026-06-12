@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CareerAnalytics.API/CareerAnalytics.API.csproj" />
+    <Project Path="src/CareerAnalytics.Application/CareerAnalytics.Application.csproj" />
+    <Project Path="src/CareerAnalytics.Domain/CareerAnalytics.Domain.csproj" />
+    <Project Path="src/CareerAnalytics.Infrastructure/CareerAnalytics.Infrastructure.csproj" />
+  </Folder>
+</Solution>
