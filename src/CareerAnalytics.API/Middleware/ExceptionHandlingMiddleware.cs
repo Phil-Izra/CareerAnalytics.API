@@ -13,6 +13,10 @@ public sealed class ExceptionHandlingMiddleware(RequestDelegate next, ILogger<Ex
         }
         catch (ValidationException ex)
         {
+            logger.LogWarning(
+                "Validation failed for {Method} {Path}: {ErrorCount} error(s)",
+                context.Request.Method, context.Request.Path, ex.Errors.Count);
+
             context.Response.StatusCode = StatusCodes.Status422UnprocessableEntity;
             context.Response.ContentType = "application/json";
 
